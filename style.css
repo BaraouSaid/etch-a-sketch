@@ -1,0 +1,57 @@
+:root {
+  --container-width : 400px;
+  --container-height : 400px;
+}
+
+
+html, body {
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Palette Mosaic', cursive;
+}
+
+header {
+  font-size: 1.3rem;
+  color:teal;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.container {
+  var(--container-width);
+  var(--container-height);
+  border: 3px solid grey;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+}
+
+.square {
+  width : calc( var(--container-width) / 16);
+  height : calc( var(--container-height) / 16);
+  border: 1px solid red;
+}
+
+.fill-square {
+  background-color: black;
+}
+
+/* .square:hover {
+  background-color:black;
+} */
